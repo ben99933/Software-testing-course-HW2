@@ -1,0 +1,8 @@
+*.docx
+*.pdf
+/node_modules/
+/coverage/
+
+*.md
+!README.md
+*tmp

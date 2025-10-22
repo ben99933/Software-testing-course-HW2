@@ -1,0 +1,17 @@
+{
+  "name": "calc-tdd",
+  "version": "1.0.0",
+  "description": "Test-Driven Development example for Calc",
+  "main": "Calc.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": ["tdd", "calculator"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
