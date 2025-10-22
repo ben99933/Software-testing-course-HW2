@@ -1,5 +1,7 @@
 # Calc TDD 專案
 
+[![CI](https://github.com/ben99933/Software-testing-course-HW2/actions/workflows/ci.yml/badge.svg)](https://github.com/ben99933/Software-testing-course-HW2/actions/workflows/ci.yml)
+
 這是一個使用**測試驅動開發 (Test-Driven Development, TDD)** 方法論實作的計算器類別專案。
 
 ## 📋 專案說明
@@ -15,6 +17,18 @@ Calc 是一個簡單的計算器類別，提供四種基本運算功能：
 - **程式語言**: JavaScript (Node.js)
 - **測試框架**: Jest
 - **開發方法**: Test-Driven Development (TDD)
+
+## 🔁 CI（GitHub Actions）
+
+- 本專案已設定 GitHub Actions 持續整合（見上方徽章）。
+- 觸發條件：
+	- push 到 master/main 或 experiment/** 分支
+	- 對 master/main 的 Pull Request
+- 工作流程：
+	- Node 版本矩陣：18.x、20.x
+	- 安裝依賴：npm ci
+	- 執行測試：npm test 與 npm run test:coverage
+	- 上傳 coverage/ 為 artifact
 
 ## 📦 安裝
 
@@ -105,7 +119,6 @@ Calc.divide(7, 2)      // 回傳 3.5（浮點數）
 Calc.divide(5, 0)      // 拋出錯誤: "Cannot divide by zero"
 ```
 
-## 🎓 學習重點
 
 這個專案展示了：
 - ✅ TDD 的完整開發流程
@@ -114,11 +127,3 @@ Calc.divide(5, 0)      // 拋出錯誤: "Cannot divide by zero"
 - ✅ 測試案例的設計（正數、負數、零、邊界條件）
 - ✅ 程式碼重構的時機與方法
 - ✅ 100% 測試覆蓋率的達成
-
-## 📝 授權
-
-本專案為教育用途。
-
----
-
-**開發日期**: 2025年10月22日
