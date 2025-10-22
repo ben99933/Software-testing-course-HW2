@@ -28,6 +28,8 @@ Calc 是一個簡單的計算器類別，提供四種基本運算功能：
 	- Node 版本矩陣：18.x、20.x
 	- 安裝依賴：npm ci
 	- 執行測試：npm test 與 npm run test:coverage
+	- 覆蓋率門檻：未達 90% coverage（lines/branches/functions/statements）則 CI 失敗
+	- 靜態分析：執行 ESLint（npm run lint），有語法/風格錯誤則 CI 失敗
 	- 上傳 coverage/ 為 artifact
 
 ## 📦 安裝
@@ -53,10 +55,18 @@ npm run test:coverage
 npm run test:watch
 ```
 
+### 執行靜態分析（ESLint）
+```bash
+npm run lint
+```
+
 ## 📊 測試結果
 
 ✅ **5 個測試套件全部通過**  
 ✅ **100% 程式碼覆蓋率**
+
+✅ **覆蓋率門檻：未達 90% coverage CI 會失敗**
+✅ **靜態分析：有 ESLint 錯誤 CI 會失敗**
 
 ```
 Test Suites: 1 passed, 1 total

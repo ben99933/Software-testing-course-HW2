@@ -14,9 +14,10 @@
   1. 檢出程式碼
   2. 設定 Node + npm 快取
   3. `npm ci`
-  4. `npm test`
-  5. `npm run test:coverage`
-  6. 上傳 `coverage/` 為 artifact
+  4. 執行 ESLint 靜態分析：`npm run lint`（有錯誤則 CI 失敗）
+  5. `npm test`
+  6. `npm run test:coverage`（未達 90% coverage CI 失敗）
+  7. 上傳 `coverage/` 為 artifact
 
 ## 如何查看 CI 狀態
 
@@ -24,6 +25,11 @@
 - Actions 分頁：可查看每次工作流程的詳細記錄與 artifacts
 
 ## 故意破壞建置（Breaking the Build）
+
+### 也可以用覆蓋率或 ESLint 來破壞建置
+
+1. 覆蓋率：註解掉部分測試或程式碼，讓 coverage < 90%，CI 會失敗。
+2. ESLint：在程式碼中故意寫違規語法（如漏分號），CI 會失敗。
 
 以下指令可在 Windows PowerShell（預設殼層）中執行。
 
